@@ -34,7 +34,7 @@ struct SkinBrowserView: View {
         List {
             if let updated = catalog.lastUpdated {
                 Text(String(format: settings.localized("Last updated %@"),
-                            updated.formatted(.relative(presentation: .named).locale(Locale(identifier: settings.language.bcp47Code)))))
+                            updated.formatted(.relative(presentation: .named).locale(Locale.current))))
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
